@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Technology </title>
+
+</head>
+<body bgcolor="white">
+<html>
+<head>
+	<title>My Book</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+<body bgcolor="orange">
+    <p>
+    	<center>
+    	<ul style="list-style-type: none;  padding: 0;">
+        <li style="display: inline;  margin-right: 10px"><a href="./home.html" 
+
+        	style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">HOME</a></li>
+        <li style="display: inline;  margin-right: 10px"><a href="./about.html" 
+
+        	style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">ABOUT</a></li>
+        <li style="display: inline;  margin-right: 10px"><a href="./contact.html" 
+        	style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">CONTACT</a></li>
+        <li style="display: inline;  margin-right: 10px"><a href="./services.html" 
+        	style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">SERVICES</a></li>
+        <li style="display: inline;  margin-right: 10px"><a href="./form.html" 
+        	style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">FORM</a></li>
+        
+        <li style="display: inline;  margin-right: 10px"><a href="./table.html" 
+            style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">TABLE</a></li>
+        
+        <li style="display: inline;  margin-right: 10px"><a href="./my book.html" 
+        	style="padding: 10px;color: white;background-color: hotpink;text-decoration: none;margin-right: 15px;">MYBOOK</a></li>
+    </ul></center></br>
+
+	</p><center>
+	<h1><u>STUDENT PORTAL APPLICATION</u></h1></center>
+	<ol><h2><u><li>DATABASE</li></u></h2>
+		<p>Database name used: <b>student_portal_application.</b></p>
+		<ul type="square"><h3><u><i><li></li></i></u></h3>
+
+			<ol><li><b></b></li>
+
+			<b><u><p>SECTION ONE : DATABASE TECHNOLOGY</b></u></p><br>
+
+
+
+        <u><b>STUDENT PORTAL APPLICATION
+Section I</b></u><br><br>
+Table describution.<br><br>
+1.<b>Admin:</b><br><br>
+Attributes:
+Username
+password<br><br>
+2.<b>Attendance:</b><br><br>
+Attributes:
+userid (Primary Key)
+coursename 
+fullnames<br><br>
+3.<b>Courses:</b><br><br>
+Attributes:
+courseid (Primary Key)
+coursename
+credi<br><br>
+4.<b>Grades:</b><br><br>
+Attributes:
+markid (Primary Key)
+catmarks (out of 30)
+finalexam(out of 60)
+courseid (Foreign Key referencing Courses)<br><br>
+5.<b>Users:</b><br><br>
+Attributes:
+userid (Primary Key)
+fullname
+age
+email
+faculty
+password<br><br>
+These are general entities and attributes that one might find in a student portal application. The actual schema may include additional details and relationships based on specific requirements. Additionally, foreign keys represent relationships between entities. Ensure proper normalization and define relationships between tables to maintain data integrity.<br><br>
+
+<b>LOGICAL DATA MODEL</b><br><br>
+
+<b><u>Section II SQL</u></b><br><br>
+Database kamugundu_fred_s_p_a<br><br>
+Table structure for table admin
+Column	Type	Null	Default
+username	varchar(100)	No	
+password	varchar(100)	No	
+Dumping data for table admin<br><br>
+Admin	1234
+Table structure for table attendance<br><br>
+Column	Type	Null	Default
+userid	int(11)	Yes	NULL
+coursename	varchar(255)	Yes	NULL
+fullname	varchar(255)	Yes	NULL
+Dumping data for table attendance<br><br>
+1	computer	kwizera
+1	database	fred
+Table structure for table courses<br><br>
+Column	Type	Null	Default
+courseid	int(12)	No	
+coursename	varchar(100)	No	
+credits	int(50)	No	
+Dumping data for table courses<br><br>
+1	database	30
+2	ikinyarwanda	20
+3	programming	20
+Table structure for table grades<br><br>
+Column	Type	Null	Default
+markid	int(12)	No	
+CATmarks/30	int(30)	No	
+FinalExam/60	int(11)	No	
+courseid	int(11)	No	
+Dumping data for table grades<br><br>
+2	22	32	1
+Table structure for table users<br><br>
+Column	Type	Null	Default
+userid	int(11)	No	
+fullname	varchar(50)	Yes	NULL
+age	int(12)	No	
+gender	varchar(100)	No	
+email	varchar(100)	No	
+faculty	varchar(100)	No	
+password	varchar(100)	No	
+Dumping data for table users<br><br>
+1	fred	0		Fred		1234
+3	gisa	2	m	Gisa	gjhcgfhgj	1234<br><br>
+
+<b><u>Section VI</u></b><br><br>
+1. Create a user with your name as username and your student number as password 
+and grant all privileges to the created user.<br><br>
+Answer
+CREATE USER'222013234'@'localhost'IDENTIFIED BY'222013234';
+GRANT ALL PRIVILEGES ON *.*TO'222013234'@'localhost';
+FLUSH PRIVILEGES;<br><br>
+2. Create a user with your "names_semi" as username and your student number as 
+password and give him insert, update, and delete privileges to the created user.
+Answer<br><br>
+CREATE USER '222013234'@'localhost' IDENTIFIED BY '222013234';
+GRANT INSERT, UPDATE, DELETE ON your_database.* TO '222013234'@'localhost';
+FLUSH PRIVILEGES;<br><br>
+1.	Revoke insert privileges to the last user you created.
+ANSWER
+REVOKE INSERT ON your_database.* FROM '222013234'@'localhost';
+FLUSH PRIVILEGES;<br><br>
+<b><u>SECTION TWO: JAVA PROGRAMMING</u></b><br><br>
+
+<b>STUDENT PORTAL APPLICATION.</b><br><br>
+1.<b><u>INTRODUCATION.</u></b><br><br>
+A Student Portal Application is a Java project designed to provide a centralized platform for managing various aspects of student-related activities within an educational institution. The application aims to streamline administrative tasks, enhance communication, and provide students with easy access to academic information. Here is a brief introduction to the key features and functionalities of the Student Portal Application:<br><br>
+1.<b> User Authentication:</b><br><br>
+•	The system incorporates secure user authentication to ensure that only authorized individuals, including administrators, teachers, and students, can access specific sections of the portal.<br><br>
+2. <b>Admin Module:</b><br><br>
+•	Administrators have access to a dedicated module for managing user accounts, courses, attendance records, and grades.
+•	They can add, update, or delete user accounts, assign courses, and oversee the overall functioning of the portal.<br><br>
+3. <b>Student Module:</b><br><br>
+•	Students can log in to view their personalized dashboards, which display information such as course schedules, attendance records, and grades.
+•	The portal allows students to register for courses, track their academic progress, and receive announcements from administrators.<br><br>
+4. <b>Attendance Tracking:</b><br><br>
+•	The system enables the tracking of student attendance for various courses. Teachers can mark attendance, and students can view their attendance records.<br><br>
+5. <b>Course Management:</b><br><br>
+•	The application provides functionality for managing courses, including creating new courses, updating course details, and associating students with specific courses.<br><br>
+6. <b>Grade Management:</b><br><br>
+•	Teachers can input and update students' grades for assignments, tests, and exams. Students can access their grades and performance summaries.<br><br>
+7. <b>Communication:</b><br><br>
+•	The portal facilitates communication between administrators, teachers, and students through announcements, notifications, and messaging features.<br><br>
+8. <b>Database Integration:</b><br><br>
+•	The application integrates with a database system (e.g., MySQL, MariaDB) to store and retrieve user information, attendance records, course details, and grades.<br><br>
+9. <b>Easy Navigation:</b><br><br>
+•	The user interface is designed for easy navigation, ensuring a user-friendly experience for both administrators and students.<br><br>
+10. <b>Security:</b><br><br>
+•	Security measures, including data encryption and secure authentication mechanisms, are implemented to protect sensitive information.
+The Student Portal Application aims to enhance efficiency, transparency, and collaboration within an educational institution by providing a centralized platform for managing academic-related tasks and fostering communication between stakeholders.<br><br>
+2.<b>Tools used in developing student portal application:</b><br><br>
+The tools used to develop a Student Portal Application in Java programming can vary depending on the specific requirements and preferences of the development team. However, here is a list of common tools and technologies that are often used in Java application development:<br><br>
+1.	<b>Integrated Development Environment (IDE):</b><br><br>
+•	Eclipse: Eclipse is a popular Java IDE that provides a comprehensive development environment with features like code highlighting, debugging, and integrated tools.<br><br>
+2.	<b>Java Development Kit (JDK):</b><br><br>
+•	Oracle JDK or OpenJDK: These are essential for Java development, providing the necessary tools, libraries, and the Java Runtime Environment (JRE).<br><br>
+3.	<b>Database Management System:</b><br><br>
+•	MySQL or Maria DB: These are commonly used relational database management systems (RDBMS) for storing and managing the application's data.<br><br>
+4.	<b>Java Database Connectivity (JDBC):</b><br><br>
+•	JDBC is a Java API that enables Java applications to interact with relational databases. It is used to connect Java applications to the backend database.<br><br>
+5.	<b>Java Server Pages (JSP) and Servlets:</b><br><br>
+•	JSP and Servlets are Java technologies used for building dynamic web applications. They are often employed in creating web-based interfaces for the Student Portal Application.<br><br>
+6.	<b>JavaFX or Swing:</b><br><br>
+•	For creating the graphical user interface (GUI) of the application, JavaFX or Swing can be used. These libraries facilitate the development of desktop applications with rich user interfaces.<br><br>
+7.	<b>Apache Maven or Gradle:</b><br><br>
+•	Maven or Gradle can be used for project management and build automation. They help manage dependencies, build the project, and streamline the development process.<br><br>
+8.	<b>Version Control:</b><br><br>
+•	Git: Git is a widely used version control system that allows collaborative development and helps manage source code changes efficiently.<br><br>
+
+9.	<b><u><p>Web Server:</b></u></p><br>
+•	Apache Tomcat or Jetty: These are popular web servers that can be used to deploy and run Java web applications.
+ 3.Forms description.<br><br>
+3.1.<b> ADMIN FORM.</b><br><br>
+My project starts from admin and it have 2 columns and a admin should login so that he/she can use the password and username to login: <br><br>
+ 
+
+3.2<b><u>USERS form</u></b><br>
+This page helps users to sign up in the system.<br>
+ 
+3.3. <b><u>courses attendance form</b></u><br>
+It helps the student to register courses he/she will attend.<br>
+
+ 
+3.4.  <b><u><p>COURSES FORM</u></b></p>
+This help the admin to register  course student will attend.<br>
+ 
+3.5. <b><u>MARKS FORM</b></u><br><br>
+This form is used to add, update, view, delete with courseid as foreign key from course table.it even gives the admin access to do so, it shows the interface.<br><br>
+
+ 
+3.6. <b><u>onclusion</b></u><br><br>
+The Student Portal Application in Java serves as a comprehensive solution for educational institutions to manage student-related information, fostering efficient administration, communication, and academic monitoring. Through its user-friendly interface, secure authentication, and integration with essential technologies, the system contributes to a streamlined educational environment, benefiting administrators, teachers, and students alike. Continuous updates and improvements can further enhance its capabilities, adapting to the evolving needs of educational institutions.<br><br>
+
+Reference: <br><br>
+1.	mysql-connector-j-8.2.0.<br>
+2.	http://localhost/phpmyadmin/index.php? <br>
+3.	Lecture’s note and practical works.<br>
+ 4.https://www.google.com/index.html<br>
+
+
+<p><b>MySQL Connectors:</b> <br>MySQL provides standards-based drivers for JDBC, ODBC, and .Net enabling developers to build database applications in their language.</p><br>
+
+
+
+			              <h3><u><i><li>Forms and Images</li></i></u></h3>
+
+<ol type="I"><li><b><h4>Admin Login Form</h4></b></br>
+ <img src="images/admin.png" width="620"><br><br><br><br><br></li>
+
+<li><b><h4>Users Login Form</h4></b></br>
+ <img src="images/user.png" width="620"><br><br><br><br><br></li>
+
+<li><b><h4>Student Marks Form</h4></b></br>
+<img src="images/marks.png" width="620"><br><br><br><br><br></li>
+
+<li><b><h4>Course Attendance Form</h4></b></br>
+<img src="images/course.png" width="620"><br><br><br><br><br>
+
+</ol>
+
+</ul>
+		
+	</ol>
+	<u><i><h2 style="color: white;">Prepared By: K.FRED</i></u></h2>
+	</body>
+	</html>
+</body>
+</html>
